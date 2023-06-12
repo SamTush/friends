@@ -1,26 +1,23 @@
-<div id="<%= dom_id friend %>">
-  <p>
-    <strong>First name:</strong>
-    <%= friend.first_name %>
-  </p>
-
-  <p>
-    <strong>Last name:</strong>
+<tr  id="<%= dom_id friend %>">
+  <th scope="row">
+      <%= friend.first_name %>
+  </th>
+  <td>
     <%= friend.last_name %>
-  </p>
-
-  <p>
-    <strong>Email:</strong>
+  </td>
+  <td>
     <%= friend.email %>
-  </p>
-
-  <p>
-    <strong>Phone:</strong>
+  </td>
+  <td>
     <%= friend.phone %>
-  </p>
-
-  <p>
-    <strong>Twitter:</strong>
+  </td>
+  <td>
     <%= friend.twitter %>
-  </p>
-</div>
+  </td>
+  <td>
+    <%= link_to "Show", friend %>
+  </td>
+  <td>
+    <%= link_to "Edit", edit_friend_path(friend) %>
+  </td>
+</tr>
